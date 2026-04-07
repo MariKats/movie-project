@@ -5,3 +5,4 @@ sqlalchemy
 pytest
 sqlmodel
 python-dotenv
+requests

@@ -1,12 +1,15 @@
-from pydantic import ConfigDict
-from pydantic_settings import BaseSettings
-from dotenv import load_dotenv
-import os
+from pathlib import Path
 
-load_dotenv()
+from pydantic_settings import BaseSettings, SettingsConfigDict
+
+BASE_DIR = Path(__file__).resolve().parent.parent.parent
+
 
 class Settings(BaseSettings):
-  DATABASE_URL: str = os.getenv("DATABASE_URL", "sqlite:///./movies.db")
-  model_config = ConfigDict(env_file=".env")
+    DATABASE_URL: str = "sqlite:///./movies.db"
+    OMDB_API_KEY: str
+
+    model_config = SettingsConfigDict(env_file=BASE_DIR / ".env")
+
 
 settings = Settings()

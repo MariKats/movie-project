@@ -1,5 +1,6 @@
 from fastapi import FastAPI
-from app.api.routes import (movies, genres, directors, actors, studios)
+
+from app.api.routes import actors, directors, genres, movies, studios
 
 app = FastAPI()
 

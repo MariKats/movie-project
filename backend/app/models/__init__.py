@@ -4,4 +4,13 @@ from app.models.genres import Genre, MovieGenre
 from app.models.movies import Movie
 from app.models.studios import Studio
 
-__all__ = ["Actor", "MovieActor", "Director", "MovieDirector", "Genre", "MovieGenre", "Movie", "Studio"]
+__all__ = [
+    "Actor",
+    "MovieActor",
+    "Director",
+    "MovieDirector",
+    "Genre",
+    "MovieGenre",
+    "Movie",
+    "Studio",
+]
