@@ -9,5 +9,3 @@ __pycache__/
  .DS_Store.
  node_modules/
  **/node_modules/
- **/.pre-commit-config.yaml
-.pre-commit-config.yaml
