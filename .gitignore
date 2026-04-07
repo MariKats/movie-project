@@ -1,0 +1,12 @@
+.venv/
+.vscode/
+.pytest_cache/
+**/.pytest_cache/
+.env
+**/.env
+__pycache__/
+**/__pycache__/
+ .DS_Store.
+ node_modules/
+ **/node_modules/
+ 
