@@ -19,6 +19,5 @@
 ## Database
 
 - seed the SQLite database with:
-  `python app/scripts/populate_db.py`
+  `python3 -m app.scripts.populate_db`
 - the default database is `sqlite:///./movies.db`.
-  
