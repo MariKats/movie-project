@@ -93,4 +93,4 @@ def test_get_actor_not_found(test_client):
 def test_get_actor_movies_not_found(test_client):
     response = test_client.get("/actors/999/movies")
     assert response.status_code == 404
-    assert response.json()["detail"] == "No Actor found with id=999"
+    assert response.json()["detail"] == "No Actor found with id=999."

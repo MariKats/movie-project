@@ -12,7 +12,7 @@ class Item(NameBase):
 
 
 class StudioBase(NameBase):
-    headquarters: str | None
+    headquarters: str | None = None
 
 
 class Studio(StudioBase):
@@ -29,7 +29,7 @@ class MovieCreate(MovieBase):
     genres: list[str]
     directors: list[str]
     actors: list[str]
-    studio: StudioBase | None
+    studio: StudioBase | None = None
 
 
 class Movie(MovieBase):
@@ -43,7 +43,7 @@ class Movie(MovieBase):
 class FilterParamsBasic(BaseModel):
     model_config = {"extra": "forbid"}
     offset: int = Field(0, ge=0)
-    limit: int | None = Field(None, ge=0, le=10)
+    limit: int | None = Field(None, ge=0)
     sort: Literal["asc", "desc"] = "asc"
 
 

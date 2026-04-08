@@ -1,7 +1,7 @@
 """
 Seed the database from app.fake_data.
-Run from the project root with:
-    python app/scripts/populate_db.py
+Run from the project backend folder with:
+    python -m app.scripts.populate_db
 """
 
 from sqlmodel import Session

@@ -38,7 +38,7 @@ async def get_actor_movies(
     actor = session.get(Actor, actor_id)
     if not actor:
         raise HTTPException(
-            status_code=404, detail=f"No Actor found with id={actor_id}"
+            status_code=404, detail=f"No Actor found with id={actor_id}."
         )
 
     if has_default_filters(filter_query):

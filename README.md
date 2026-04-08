@@ -11,13 +11,13 @@
 - install dependencies:
   `pip install -r requirements.txt`
 
-## Run
-
-- navigate to the backend folder and start the API with uvicorn:
-  `uvicorn --reload app.main:app`
-
 ## Database
 
 - seed the SQLite database with:
   `python3 -m app.scripts.populate_db`
 - the default database is `sqlite:///./movies.db`.
+
+## Run
+
+- navigate to the backend folder and start the API with uvicorn:
+  `uvicorn --reload app.main:app`

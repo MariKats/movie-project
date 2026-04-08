@@ -1,6 +1,6 @@
 from typing import Annotated
 
-from fastapi import APIRouter, HTTPException, Path, Query
+from fastapi import APIRouter, Body, HTTPException, Path, Query
 from sqlmodel import select
 
 from app.api.common import (
@@ -11,7 +11,7 @@ from app.api.common import (
     find_or_create_items,
 )
 from app.models.movies import Movie as MovieModel
-from app.schemas.schemas import FilterParams, Movie, MovieCreate
+from app.schemas.schemas import FilterParams, Movie, MovieCreate, StudioBase
 from app.services.movie_service import get_movie_data
 
 router = APIRouter(prefix="/movies", tags=["movies"])
@@ -72,3 +72,26 @@ async def create_movie(
     session.commit()
     session.refresh(new_movie)
     return new_movie
+
+
+@router.patch("/{movie_id}/update-studio")
+async def update_movie_studio(
+    session: SessionDep,
+    movie_id: Annotated[int, Path(ge=0)],
+    studio: Annotated[StudioBase, Body(embed=True)],
+) -> Movie:
+    movie = session.get(MovieModel, movie_id)
+    if not movie:
+        raise HTTPException(
+            status_code=404, detail=f"No Movie found with id={movie_id}."
+        )
+
+    print(f"Updating movie {movie_id} with studio {studio.name}")
+    studio = find_or_create_item(session, CreateField.studio, studio)
+    print(f"Found or created studio: {studio}")
+    movie.studio = studio
+
+    session.add(movie)
+    session.commit()
+    session.refresh(movie)
+    return movie

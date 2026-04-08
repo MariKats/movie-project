@@ -10,11 +10,6 @@ def test_movies_negative_offset_validation(test_client):
     assert_validation_error(response, "greater than or equal to 0")
 
 
-def test_movies_limit_too_high_validation(test_client):
-    response = test_client.get("/movies?limit=20")
-    assert_validation_error(response, "less than or equal to 10")
-
-
 def test_movies_invalid_sort_validation(test_client):
     response = test_client.get("/movies?sort=invalid")
     assert_validation_error(response, "Input should be")
