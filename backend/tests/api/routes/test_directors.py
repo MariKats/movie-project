@@ -1,4 +1,4 @@
-from app.fake_data import directors
+from backend.app.seed_data import directors
 
 
 def test_get_directors(test_client):

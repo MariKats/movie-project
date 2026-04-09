@@ -33,6 +33,11 @@ class MovieCreate(MovieBase):
     studio: StudioBase | None = None
 
 
+class MovieUpdate(BaseModel):
+    studio: StudioBase | None = None
+    poster: HttpUrl | None = None
+
+
 class Movie(MovieBase):
     id: int
     genres: list[Item]

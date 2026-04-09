@@ -3,7 +3,7 @@ from unittest.mock import Mock, patch
 import pytest
 from fastapi import HTTPException
 
-from app.services.movie_service import get_movie_data
+from app.services.movie_service import OMDBMovieService
 
 VALID_RESPONSE = {
     "Response": "True",
@@ -14,7 +14,7 @@ VALID_RESPONSE = {
     "Director": "Francis Ford Coppola",
     "Actors": "Al Pacino, Marlon Brando",
     "Production": "Paramount Pictures",
-    "Poster": "https://m.media-amazon.com/images/M/MV5BNGEwYjgwOGQtYjg5ZS00Njc1LTk2ZGEtM2QwZWQ2NjdhZTE5XkEyXkFqcGc@._V1_SX300.jpg"
+    "Poster": "https://m.media-amazon.com/images/M/MV5BNGEwYjgwOGQtYjg5ZS00Njc1LTk2ZGEtM2QwZWQ2NjdhZTE5XkEyXkFqcGc@._V1_SX300.jpg",
 }
 
 
@@ -32,7 +32,7 @@ def test_get_movie_data_success(mock_get):
 
     mock_get.return_value = mock_response
 
-    result = get_movie_data("The Godfather")
+    result = OMDBMovieService("The Godfather").get_movie_data()
 
     assert result.title == "The Godfather"
     assert result.year == 1972
@@ -49,7 +49,7 @@ def test_get_movie_data_not_found(mock_get):
     mock_get.return_value = mock_response
 
     with pytest.raises(HTTPException) as exc:
-        get_movie_data("Unknown Movie")
+        OMDBMovieService("Unknown Movie").get_movie_data()
 
     assert exc.value.status_code == 404
     assert "Movie not found" in exc.value.detail
@@ -62,7 +62,7 @@ def test_get_movie_data_http_error(mock_get):
     mock_get.side_effect = HTTPError()
 
     with pytest.raises(HTTPException) as exc:
-        get_movie_data("Test")
+        OMDBMovieService("Test").get_movie_data()
 
     assert exc.value.status_code == 502
 
@@ -74,7 +74,7 @@ def test_get_movie_data_timeout(mock_get):
     mock_get.side_effect = Timeout()
 
     with pytest.raises(HTTPException) as exc:
-        get_movie_data("Test")
+        OMDBMovieService("Test").get_movie_data()
 
     assert exc.value.status_code == 504
 
@@ -91,6 +91,6 @@ def test_get_movie_data_invalid_data(mock_get):
     mock_get.return_value = mock_response
 
     with pytest.raises(HTTPException) as exc:
-        get_movie_data("Bad Movie")
+        OMDBMovieService("Bad Movie").get_movie_data()
 
     assert exc.value.status_code == 422

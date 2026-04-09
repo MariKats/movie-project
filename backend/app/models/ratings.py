@@ -13,5 +13,5 @@
 
 # class MovieRating(SQLModel, table=True):
 #   movie_id: int | None = Field(default=None, primary_key=True, foreign_key="movie.id")
-#   rating_id: int | None = Field(default=None, 
+#   rating_id: int | None = Field(default=None,
 #     primary_key=True, foreign_key="ratingsource.id")

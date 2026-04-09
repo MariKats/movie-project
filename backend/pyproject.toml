@@ -13,7 +13,6 @@ profile = "black"
 
 [tool.ruff]
 line-length = 88
-select = ["E", "F", "I"]
 indent-width = 4
 exclude = [
     ".git",
@@ -34,3 +33,6 @@ exclude = [
     "venv",
     "**/fake_data.py"
 ]
+
+[tool.ruff.lint]
+select = ["E", "F", "I"]

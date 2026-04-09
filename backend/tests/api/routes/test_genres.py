@@ -1,4 +1,4 @@
-from app.fake_data import genres
+from backend.app.seed_data import genres
 
 
 def test_get_genres(test_client):

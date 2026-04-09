@@ -7,12 +7,12 @@ Run from the project backend folder with:
 from sqlmodel import Session
 
 from app.core.database import SessionLocal, create_db_and_tables
-from app.fake_data import actors as actors_data
-from app.fake_data import directors as directors_data
-from app.fake_data import genres as genres_data
-from app.fake_data import movies as movies_data
-from app.fake_data import studios as studios_data
 from app.models.movies import Actor, Director, Genre, Movie, Studio
+from app.seed_data import actors as actors_data
+from app.seed_data import directors as directors_data
+from app.seed_data import genres as genres_data
+from app.seed_data import movies as movies_data
+from app.seed_data import studios as studios_data
 
 
 def seed_reference_data(session: Session) -> None:
@@ -42,6 +42,7 @@ def seed_movies(session: Session) -> None:
             title=movie_data["title"],
             summary=movie_data["summary"],
             year=movie_data["year"],
+            poster=movie_data["poster"],
             studio_id=movie_data["studio"]["id"],
         )
 

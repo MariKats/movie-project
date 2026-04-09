@@ -1,4 +1,4 @@
-from app.fake_data import actors
+from backend.app.seed_data import actors
 
 
 def test_get_actors(test_client):

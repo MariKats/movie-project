@@ -45,6 +45,6 @@ async def get_studio_movies(
 
     if has_default_filters(filter_query):
         return studio.movies
-    
+
     query = select(MovieModel).where(MovieModel.studio_id == studio_id)
     return filter_movies(query, session, filter_query)

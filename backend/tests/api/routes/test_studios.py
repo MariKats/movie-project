@@ -1,4 +1,4 @@
-from app.fake_data import studios
+from backend.app.seed_data import studios
 
 
 def test_get_studios(test_client):

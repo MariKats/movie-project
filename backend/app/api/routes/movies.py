@@ -11,8 +11,13 @@ from app.api.common import (
     find_or_create_items,
 )
 from app.models.movies import Movie as MovieModel
-from app.schemas.schemas import FilterParams, Movie, MovieCreate, StudioBase
-from app.services.movie_service import get_movie_data
+from app.schemas.schemas import (
+    FilterParams,
+    Movie,
+    MovieCreate,
+    MovieUpdate,
+)
+from app.services.movie_service import OMDBMovieService
 
 router = APIRouter(prefix="/movies", tags=["movies"])
 
@@ -45,10 +50,11 @@ async def create_movie(
 
     existing = session.exec(query).first()
     if existing:
+        print(f"Movie '{title}' already exists in the database.")
         return existing
 
     try:
-        movie: MovieCreate = get_movie_data(title, year)
+        movie: MovieCreate = OMDBMovieService(title=title, year=year).get_movie_data()
     except HTTPException:
         raise
     except Exception:
@@ -58,6 +64,7 @@ async def create_movie(
         title=movie.title,
         year=movie.year,
         summary=movie.summary,
+        poster=str(movie.poster) if movie.poster else None,
         actors=find_or_create_items(session, CreateField.actor, movie.actors),
         genres=find_or_create_items(session, CreateField.genre, movie.genres),
         directors=find_or_create_items(session, CreateField.director, movie.directors),
@@ -74,11 +81,11 @@ async def create_movie(
     return new_movie
 
 
-@router.patch("/{movie_id}/update-studio")
+@router.patch("/{movie_id}")
 async def update_movie_studio(
     session: SessionDep,
     movie_id: Annotated[int, Path(ge=0)],
-    studio: Annotated[StudioBase, Body(embed=True)],
+    update: Annotated[MovieUpdate, Body(embed=True)],
 ) -> Movie:
     movie = session.get(MovieModel, movie_id)
     if not movie:
@@ -86,10 +93,12 @@ async def update_movie_studio(
             status_code=404, detail=f"No Movie found with id={movie_id}."
         )
 
-    print(f"Updating movie {movie_id} with studio {studio.name}")
-    studio = find_or_create_item(session, CreateField.studio, studio)
-    print(f"Found or created studio: {studio}")
-    movie.studio = studio
+    if update.poster is not None:
+        movie.poster = str(update.poster)
+
+    if update.studio is not None:
+        studio = find_or_create_item(session, CreateField.studio, update.studio)
+        movie.studio = studio
 
     session.add(movie)
     session.commit()
