@@ -1,0 +1,139 @@
+.movie-list {
+  width: 100%;
+  padding: 1rem;
+  transform: translateZ(0);
+  overflow: visible !important;
+  background: #121212;
+}
+
+.movie-item {
+  --top-deadzone-height: 56px;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition: transform 220ms ease, box-shadow 220ms ease;
+}
+
+.movie-image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 220ms ease, filter 220ms ease;
+}
+
+/* Top area where hover effects should not apply */
+.hover-deadzone {
+  position: absolute;
+  inset: 0 0 auto 0;
+  height: var(--top-deadzone-height);
+  z-index: 4;
+  background: transparent;
+  pointer-events: auto;
+}
+
+.hover-info {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: min(90%, 450px);
+  max-height: 90%;
+  overflow: auto;
+  padding: 14px 16px;
+  color: #fff;
+  text-align: left;
+  opacity: 0;
+  transform: translate(-50%, -44%);
+  pointer-events: none;
+  transition: opacity 220ms ease, transform 220ms ease;
+  background: rgba(18, 18, 18, 0.9);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-top: 2px solid transparent;
+  border-radius: 12px;
+  -webkit-backdrop-filter: blur(4px);
+  backdrop-filter: blur(4px);
+  z-index: 3;
+}
+
+.hover-header {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.hover-title {
+  font-weight: 700;
+  color: #fff;
+}
+
+.hover-year {
+  color: #d0d0d0;
+}
+
+.hover-summary {
+  margin: 25px 0 !important;
+  color: #e7e7e7;
+  line-height: 1.35;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.hover-meta-row {
+  display: grid;
+  grid-template-columns: 72px 1fr;
+  gap: 8px;
+  font-size: 12px;
+}
+
+.meta-label {
+  color: #b3b3b3;
+  font-weight: 600;
+}
+
+.meta-value {
+  color: #f2f2f2;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Keep bar and icon clickable/visible */
+.movie-item-bar {
+  position: relative;
+  z-index: 5;
+  pointer-events: auto;
+  opacity: 1;
+}
+
+.movie-item-bar .MuiImageListItemBar-root,
+.movie-item-bar {
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.7) 0%,
+    rgba(0, 0, 0, 0.3) 70%,
+    rgba(0, 0, 0, 0) 100%
+  );
+}
+
+/* Hover effects only when NOT over deadzone or top bar */
+.movie-item:hover:not(:has(.hover-deadzone:hover)):not(:has(.movie-item-bar:hover)) {
+  transform: scale(1.04);
+  z-index: 2;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.35);
+  border-color: #e50914;
+}
+
+.movie-item:hover:not(:has(.hover-deadzone:hover)):not(:has(.movie-item-bar:hover)) .movie-image {
+  filter: blur(3px) brightness(0.5);
+  transform: scale(1.02);
+}
+
+.movie-item:hover:not(:has(.hover-deadzone:hover)):not(:has(.movie-item-bar:hover)) .hover-info {
+  opacity: 1;
+  transform: translate(-50%, -50%);
+  border-color: #e50914;
+}
