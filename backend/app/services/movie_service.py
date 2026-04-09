@@ -34,12 +34,10 @@ def _transform_movie_object(movie_data: Dict[str, Any]) -> MovieCreate:
             d.strip().title() for d in movie_data.get("Director").split(",") if d
         ],
         "actors": [a.strip().title() for a in movie_data.get("Actors").split(",") if a],
-        "studio": (
-            {"name": movie_data.get("Production"), "headquarters": "N/A"}
-            if movie_data.get("Production") not in [None, "N/A"]
-            else None
-        ),
+        "poster": movie_data.get("Poster")
     }
+    if movie_data.get("Production") not in [None, "N/A"]:
+        new_movie.update({"studio": {"name": movie_data.get("Production")}})
 
     return MovieCreate(**new_movie)
 

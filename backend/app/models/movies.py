@@ -11,6 +11,7 @@ class Movie(SQLModel, table=True):
     title: str = Field(index=True)
     summary: str
     year: int
+    poster: str | None = None
     genres: list[Genre] = Relationship(back_populates="movies", link_model=MovieGenre)
     actors: list[Actor] = Relationship(back_populates="movies", link_model=MovieActor)
     directors: list[Director] = Relationship(

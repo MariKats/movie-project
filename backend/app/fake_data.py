@@ -178,6 +178,7 @@ movies = [
         "title": "The Shawshank Redemption",
         "summary": "Two imprisoned men bond over a number of years, finding solace and eventual redemption through acts of common decency.",
         "year": 1994,
+        "poster": None,
         "genres": [{"id": 18, "name": "Drama"}],
         "directors": [{"id": 5, "name": "Frank Darabont"}],
         "actors": [
@@ -195,6 +196,7 @@ movies = [
         "title": "The Godfather",
         "summary": "The aging patriarch of an organized crime dynasty transfers control of his clandestine empire to his youngest and reluctant son.",
         "year": 1972,
+        "poster": None,
         "genres": [{"id": 1, "name": "Crime"}, {"id": 18, "name": "Drama"}],
         "directors": [{"id": 30, "name": "Francis Ford Coppola"}],
         "actors": [{"id": 4, "name": "Al Pacino"}, {"id": 53, "name": "Marlon Brando"}],
@@ -209,6 +211,7 @@ movies = [
         "title": "The Dark Knight",
         "summary": "When the menace known as the Joker wreaks havoc on Gotham, Batman must confront his greatest challenge.",
         "year": 2008,
+        "poster": None,
         "genres": [
             {"id": 1, "name": "Crime"},
             {"id": 12, "name": "Action"},
@@ -226,6 +229,7 @@ movies = [
         "title": "Pulp Fiction",
         "summary": "The lives of two mob hitmen, a boxer, a gangster's wife, and a pair of diner bandits intertwine in four tales of violence and redemption.",
         "year": 1994,
+        "poster": None,
         "genres": [{"id": 1, "name": "Crime"}, {"id": 18, "name": "Drama"}],
         "directors": [{"id": 34, "name": "Quentin Tarantino"}],
         "actors": [
@@ -240,6 +244,7 @@ movies = [
         "title": "Forrest Gump",
         "summary": "The presidencies of Kennedy and Johnson, the Vietnam War, and the Watergate scandal unfold from the perspective of an Alabama man with an IQ of 75.",
         "year": 1994,
+        "poster": None,
         "genres": [{"id": 2, "name": "Romance"}, {"id": 18, "name": "Drama"}],
         "directors": [{"id": 10, "name": "Robert Zemeckis"}],
         "actors": [{"id": 20, "name": "Tom Hanks"}, {"id": 66, "name": "Sally Field"}],
@@ -254,6 +259,7 @@ movies = [
         "title": "Inception",
         "summary": "A thief who steals corporate secrets through dream-sharing technology is given the inverse task of planting an idea.",
         "year": 2010,
+        "poster": None,
         "genres": [
             {"id": 3, "name": "Thriller"},
             {"id": 7, "name": "Sci-Fi"},
@@ -271,6 +277,7 @@ movies = [
         "title": "The Matrix",
         "summary": "A computer hacker learns from mysterious rebels about the true nature of his reality and his role in the war against its controllers.",
         "year": 1999,
+        "poster": None,
         "genres": [{"id": 7, "name": "Sci-Fi"}, {"id": 12, "name": "Action"}],
         "directors": [
             {"id": 4, "name": "Lana Wachowski"},
@@ -287,6 +294,7 @@ movies = [
         "title": "Interstellar",
         "summary": "A team of explorers travel through a wormhole in space in an attempt to ensure humanity's survival.",
         "year": 2014,
+        "poster": None,
         "genres": [
             {"id": 6, "name": "Adventure"},
             {"id": 7, "name": "Sci-Fi"},
@@ -308,6 +316,7 @@ movies = [
         "title": "The Avengers",
         "summary": "Earth's mightiest heroes must come together and learn to fight as a team to prevent an alien invasion.",
         "year": 2012,
+        "poster": None,
         "genres": [
             {"id": 6, "name": "Adventure"},
             {"id": 7, "name": "Sci-Fi"},
@@ -329,6 +338,7 @@ movies = [
         "title": "Gladiator",
         "summary": "A former Roman General sets out to exact vengeance against the corrupt emperor who murdered his family and sent him into slavery.",
         "year": 2000,
+        "poster": None,
         "genres": [
             {"id": 6, "name": "Adventure"},
             {"id": 12, "name": "Action"},
@@ -350,6 +360,7 @@ movies = [
         "title": "Titanic",
         "summary": "A seventeen-year-old aristocrat falls in love with a kind but poor artist aboard the luxurious, ill-fated R.M.S. Titanic.",
         "year": 1997,
+        "poster": None,
         "genres": [{"id": 2, "name": "Romance"}, {"id": 18, "name": "Drama"}],
         "directors": [{"id": 2, "name": "James Cameron"}],
         "actors": [
@@ -367,6 +378,7 @@ movies = [
         "title": "Avatar",
         "summary": "A paraplegic Marine dispatched to the moon Pandora on a unique mission becomes torn between following his orders and protecting the world he feels is his home.",
         "year": 2009,
+        "poster": None,
         "genres": [
             {"id": 6, "name": "Adventure"},
             {"id": 12, "name": "Action"},
@@ -388,6 +400,7 @@ movies = [
         "title": "The Lion King",
         "summary": "Lion prince Simba and his father are targeted by his bitter uncle, who wants to ascend the throne himself.",
         "year": 1994,
+        "poster": None,
         "genres": [
             {"id": 0, "name": "Animation"},
             {"id": 6, "name": "Adventure"},
@@ -412,6 +425,7 @@ movies = [
         "title": "Jurassic Park",
         "summary": "A pragmatic paleontologist tours an almost complete theme park is tasked with protecting a couple of kids.",
         "year": 1993,
+        "poster": None,
         "genres": [
             {"id": 6, "name": "Adventure"},
             {"id": 7, "name": "Sci-Fi"},
@@ -430,6 +444,7 @@ movies = [
         "title": "Back to the Future",
         "summary": "A teenager is accidentally sent back in time in a time-traveling car invented by an eccentric scientist, and must ensure his parents fall in love.",
         "year": 1985,
+        "poster": None,
         "genres": [
             {"id": 6, "name": "Adventure"},
             {"id": 7, "name": "Sci-Fi"},
@@ -451,6 +466,7 @@ movies = [
         "title": "Jaws",
         "summary": "When a huge shark begins terror on the beach, the police chief, an oceanographer, and a grizzled shark hunter embark on a mission to stop it.",
         "year": 1975,
+        "poster": None,
         "genres": [{"id": 3, "name": "Thriller"}, {"id": 6, "name": "Adventure"}],
         "directors": [{"id": 0, "name": "Steven Spielberg"}],
         "actors": [
@@ -468,6 +484,7 @@ movies = [
         "title": "E.T. the Extra-Terrestrial",
         "summary": "A troubled child summons the courage to help a friendly alien escape Earth and return to his home planet.",
         "year": 1982,
+        "poster": None,
         "genres": [
             {"id": 6, "name": "Adventure"},
             {"id": 7, "name": "Sci-Fi"},
@@ -489,6 +506,7 @@ movies = [
         "title": "The Silence of the Lambs",
         "summary": "A young FBI cadet must receive the help of an incarcerated and manipulative cannibal killer to help catch another serial killer.",
         "year": 1991,
+        "poster": None,
         "genres": [
             {"id": 1, "name": "Crime"},
             {"id": 3, "name": "Thriller"},
@@ -510,6 +528,7 @@ movies = [
         "title": "Schindler's List",
         "summary": "In German-occupied Poland during World War II, industrialist Oskar Schindler gradually becomes concerned for his Jewish workforce.",
         "year": 1993,
+        "poster": None,
         "genres": [
             {"id": 5, "name": "History"},
             {"id": 9, "name": "Biography"},
@@ -531,6 +550,7 @@ movies = [
         "title": "The Shining",
         "summary": "A family isolated in a snowbound hotel descends into madness in this Stanley Kubrick masterpiece.",
         "year": 1980,
+        "poster": None,
         "genres": [{"id": 4, "name": "Horror"}, {"id": 18, "name": "Drama"}],
         "directors": [{"id": 16, "name": "Stanley Kubrick"}],
         "actors": [
@@ -544,6 +564,7 @@ movies = [
         "title": "Casablanca",
         "summary": "In Casablanca, Morocco, an American expatriate meets a former lover, leading to a tense love triangle of epic proportions.",
         "year": 1942,
+        "poster": None,
         "genres": [
             {"id": 2, "name": "Romance"},
             {"id": 11, "name": "War"},
@@ -561,6 +582,7 @@ movies = [
         "title": "Citizen Kane",
         "summary": "A reporter investigates the life of media mogul Charles Foster Kane from his rise to his mysterious death.",
         "year": 1941,
+        "poster": None,
         "genres": [{"id": 13, "name": "Mystery"}, {"id": 18, "name": "Drama"}],
         "directors": [{"id": 19, "name": "Orson Welles"}],
         "actors": [
@@ -578,6 +600,7 @@ movies = [
         "title": "12 Angry Men",
         "summary": "A jury of twelve must deliberate and reach a unanimous verdict in a murder case.",
         "year": 1957,
+        "poster": None,
         "genres": [{"id": 1, "name": "Crime"}, {"id": 18, "name": "Drama"}],
         "directors": [{"id": 27, "name": "Sidney Lumet"}],
         "actors": [{"id": 6, "name": "Henry Fonda"}, {"id": 25, "name": "Lee J. Cobb"}],
@@ -588,6 +611,7 @@ movies = [
         "title": "Singin' in the Rain",
         "summary": "Three friends make it big in silent films and must transition to talking pictures.",
         "year": 1952,
+        "poster": None,
         "genres": [
             {"id": 2, "name": "Romance"},
             {"id": 8, "name": "Musical"},
@@ -608,6 +632,7 @@ movies = [
         "title": "Vertigo",
         "summary": "A former policeman is hired to follow a mysterious woman in San Francisco and things take a dark turn.",
         "year": 1958,
+        "poster": None,
         "genres": [{"id": 3, "name": "Thriller"}, {"id": 13, "name": "Mystery"}],
         "directors": [{"id": 18, "name": "Alfred Hitchcock"}],
         "actors": [{"id": 3, "name": "James Stewart"}, {"id": 12, "name": "Kim Novak"}],
@@ -622,6 +647,7 @@ movies = [
         "title": "Psycho",
         "summary": "A woman is murdered after checking into an eerie motel run by a disturbed young man.",
         "year": 1960,
+        "poster": None,
         "genres": [
             {"id": 3, "name": "Thriller"},
             {"id": 4, "name": "Horror"},
@@ -643,6 +669,7 @@ movies = [
         "title": "Rear Window",
         "summary": "A housebound photographer observes the lives of his neighbors from his window and suspects one of them of murder.",
         "year": 1954,
+        "poster": None,
         "genres": [{"id": 3, "name": "Thriller"}, {"id": 13, "name": "Mystery"}],
         "directors": [{"id": 18, "name": "Alfred Hitchcock"}],
         "actors": [
@@ -660,6 +687,7 @@ movies = [
         "title": "Goodfellas",
         "summary": "The story of Henry Hill and his life in the mafia, covering his relationship with his wife and his partners.",
         "year": 1990,
+        "poster": None,
         "genres": [{"id": 1, "name": "Crime"}, {"id": 18, "name": "Drama"}],
         "directors": [{"id": 6, "name": "Martin Scorsese"}],
         "actors": [
@@ -677,6 +705,7 @@ movies = [
         "title": "The Godfather Part II",
         "summary": "The early life and career of Vito Corleone in 1920s New York is portrayed while his youngest son Michael expands his crime empire.",
         "year": 1974,
+        "poster": None,
         "genres": [{"id": 1, "name": "Crime"}, {"id": 18, "name": "Drama"}],
         "directors": [{"id": 30, "name": "Francis Ford Coppola"}],
         "actors": [
@@ -694,6 +723,7 @@ movies = [
         "title": "Apocalypse Now",
         "summary": "A captain is sent upriver to assess a mysterious commander who has disappeared.",
         "year": 1979,
+        "poster": None,
         "genres": [{"id": 11, "name": "War"}, {"id": 18, "name": "Drama"}],
         "directors": [{"id": 30, "name": "Francis Ford Coppola"}],
         "actors": [
@@ -711,6 +741,7 @@ movies = [
         "title": "Se7en",
         "summary": "Two detectives hunt a serial killer who uses the seven deadly sins as his motives.",
         "year": 1995,
+        "poster": None,
         "genres": [
             {"id": 1, "name": "Crime"},
             {"id": 13, "name": "Mystery"},
@@ -728,6 +759,7 @@ movies = [
         "title": "The Usual Suspects",
         "summary": "A con artist is arrested alongside other criminals and tells the story of how they came together.",
         "year": 1995,
+        "poster": None,
         "genres": [
             {"id": 1, "name": "Crime"},
             {"id": 13, "name": "Mystery"},
@@ -745,6 +777,7 @@ movies = [
         "title": "Saving Private Ryan",
         "summary": "Following the Normandy Landings, a group of men are tasked with finding and bringing home Private James Ryan.",
         "year": 1998,
+        "poster": None,
         "genres": [{"id": 11, "name": "War"}, {"id": 18, "name": "Drama"}],
         "directors": [{"id": 0, "name": "Steven Spielberg"}],
         "actors": [{"id": 20, "name": "Tom Hanks"}, {"id": 56, "name": "Edward Burns"}],
@@ -759,6 +792,7 @@ movies = [
         "title": "The Green Mile",
         "summary": "The lives of guards on Death Row are affected by one of their charges: a black man accused of child murder and rape.",
         "year": 1999,
+        "poster": None,
         "genres": [
             {"id": 1, "name": "Crime"},
             {"id": 15, "name": "Fantasy"},
@@ -780,6 +814,7 @@ movies = [
         "title": "Dances with Wolves",
         "summary": "A Union soldier befriends a Native American tribe and is accepted into their community.",
         "year": 1990,
+        "poster": None,
         "genres": [
             {"id": 6, "name": "Adventure"},
             {"id": 14, "name": "Western"},
@@ -801,6 +836,7 @@ movies = [
         "title": "Braveheart",
         "summary": "Scottish warrior William Wallace leads his countrymen in a rebellion to free Scotland from English rule.",
         "year": 1995,
+        "poster": None,
         "genres": [
             {"id": 5, "name": "History"},
             {"id": 9, "name": "Biography"},
@@ -822,6 +858,7 @@ movies = [
         "title": "The Departed",
         "summary": "An undercover cop and a mole in the police attempt to identify each other while infiltrating an Irish gang.",
         "year": 2006,
+        "poster": None,
         "genres": [
             {"id": 1, "name": "Crime"},
             {"id": 3, "name": "Thriller"},
@@ -843,6 +880,7 @@ movies = [
         "title": "Gladiator II",
         "summary": "Years after witnessing his father's death, Lucius faces his past when confronted by new powerful forces.",
         "year": 2024,
+        "poster": None,
         "genres": [
             {"id": 6, "name": "Adventure"},
             {"id": 12, "name": "Action"},
@@ -864,6 +902,7 @@ movies = [
         "title": "Oppenheimer",
         "summary": "The story of American scientist J. Robert Oppenheimer and his role in the development of the atomic bomb.",
         "year": 2023,
+        "poster": None,
         "genres": [
             {"id": 5, "name": "History"},
             {"id": 9, "name": "Biography"},
@@ -881,6 +920,7 @@ movies = [
         "title": "Barbie",
         "summary": "Barbie's perfect life in the Barbie universe is interrupted when she gets a chance to experience the real world.",
         "year": 2023,
+        "poster": None,
         "genres": [
             {"id": 6, "name": "Adventure"},
             {"id": 10, "name": "Comedy"},
@@ -902,6 +942,7 @@ movies = [
         "title": "Killers of the Flower Moon",
         "summary": "Oil brings riches and violence to the Osage Nation, when a series of murders plagues the community.",
         "year": 2023,
+        "poster": None,
         "genres": [
             {"id": 1, "name": "Crime"},
             {"id": 5, "name": "History"},
@@ -923,6 +964,7 @@ movies = [
         "title": "The Brutalist",
         "summary": "The story of a visionary architect as he rebuilds his life and designs a monumental structure.",
         "year": 2023,
+        "poster": None,
         "genres": [{"id": 9, "name": "Biography"}, {"id": 18, "name": "Drama"}],
         "directors": [{"id": 12, "name": "Brady Corbet"}],
         "actors": [
@@ -936,6 +978,7 @@ movies = [
         "title": "Dune",
         "summary": "Paul Atreides travels to the dangerous planet Arrakis to ensure the future of his family and people.",
         "year": 2021,
+        "poster": None,
         "genres": [
             {"id": 6, "name": "Adventure"},
             {"id": 12, "name": "Action"},
@@ -953,6 +996,7 @@ movies = [
         "title": "Dune: Part Two",
         "summary": "Paul Atreides must travel to the dangerous planet Arrakis to teach the Fremen the ways of fighting Harkonnen oppressors.",
         "year": 2024,
+        "poster": None,
         "genres": [
             {"id": 6, "name": "Adventure"},
             {"id": 12, "name": "Action"},
@@ -970,6 +1014,7 @@ movies = [
         "title": "Twisters",
         "summary": "A former storm chaser reluctantly joins forces with a new team to battle destructive tornadoes.",
         "year": 2024,
+        "poster": None,
         "genres": [
             {"id": 6, "name": "Adventure"},
             {"id": 12, "name": "Action"},
@@ -991,6 +1036,7 @@ movies = [
         "title": "Inside Out 2",
         "summary": "Riley's emotions are joined by new feelings as she enters her teenage years and navigates new social challenges.",
         "year": 2024,
+        "poster": None,
         "genres": [
             {"id": 0, "name": "Animation"},
             {"id": 6, "name": "Adventure"},
@@ -1012,6 +1058,7 @@ movies = [
         "title": "Deadpool & Wolverine",
         "summary": "Merc with a Mouth teams up with Wolverine for an adventure across the multiverse.",
         "year": 2024,
+        "poster": None,
         "genres": [
             {"id": 7, "name": "Sci-Fi"},
             {"id": 10, "name": "Comedy"},
@@ -1033,6 +1080,7 @@ movies = [
         "title": "A Quiet Place: Day One",
         "summary": "As New York City is invaded by alien creatures that hunt by sound, a woman struggles to find her way through the chaos.",
         "year": 2024,
+        "poster": None,
         "genres": [
             {"id": 4, "name": "Horror"},
             {"id": 7, "name": "Sci-Fi"},
@@ -1054,6 +1102,7 @@ movies = [
         "title": "The Sympathizer",
         "summary": "A conflicted spy navigates double life in post-war Vietnam during a pivotal era of American-Vietnamese relations.",
         "year": 2024,
+        "poster": None,
         "genres": [
             {"id": 3, "name": "Thriller"},
             {"id": 5, "name": "History"},
@@ -1071,6 +1120,7 @@ movies = [
         "title": "Kubernetes for Dummies",
         "summary": "Documentary about container orchestration and cloud-native applications in the modern era.",
         "year": 2022,
+        "poster": None,
         "genres": [{"id": 17, "name": "Documentary"}],
         "directors": [{"id": 20, "name": "Tech Filmmaker"}],
         "actors": [{"id": 51, "name": "Various Experts"}],
@@ -1085,6 +1135,7 @@ movies = [
         "title": "The Last Duel",
         "summary": "A knight returns from war to find his wife has accused his closest friend of rape, leading to a final duel.",
         "year": 2021,
+        "poster": None,
         "genres": [{"id": 5, "name": "History"}, {"id": 18, "name": "Drama"}],
         "directors": [{"id": 28, "name": "Ridley Scott"}],
         "actors": [{"id": 22, "name": "Matt Damon"}, {"id": 55, "name": "Adam Driver"}],
@@ -1099,6 +1150,7 @@ movies = [
         "title": "Nomadland",
         "summary": "A woman in her sixties loses everything in the Great Recession and decides to live as a van-dwelling nomad.",
         "year": 2020,
+        "poster": None,
         "genres": [{"id": 18, "name": "Drama"}],
         "directors": [{"id": 1, "name": "Chloé Zhao"}],
         "actors": [{"id": 1, "name": "Frances McDormand"}],
