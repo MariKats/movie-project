@@ -6,6 +6,14 @@
   background: #121212;
 }
 
+.movie-list-subheader {
+  font-family: 'Bebas Neue', sans-serif !important;
+  font-size: 2.5rem !important;
+  letter-spacing: 2px !important;
+  color: #fff !important;
+  background-color: #e50914 !important;
+}
+
 .movie-item {
   --top-deadzone-height: 56px;
   cursor: pointer;

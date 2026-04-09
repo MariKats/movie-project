@@ -5,10 +5,12 @@ import ListSubheader from '@mui/material/ListSubheader';
 import type { Movie } from './models';
 import IconButton from '@mui/material/IconButton';
 import StarBorderIcon from '@mui/icons-material/StarBorder';
+import StarIcon from '@mui/icons-material/Star';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import { useTheme } from '@mui/material/styles';
+import { useState } from 'react';
 import './MovieList.css';
 
 interface MovieListProps {  
@@ -17,13 +19,19 @@ interface MovieListProps {
 
 export default function MovieList({ movies }: MovieListProps) {
   const theme = useTheme();
+  const [starred, setStarred] = useState<Set<number>>(new Set());
   const isXs = useMediaQuery(theme.breakpoints.down('sm'));  // < 600px
   const isSm = useMediaQuery(theme.breakpoints.down('md')); // < 900px
 
   const cols = isXs ? 1 : isSm ? 2 : 3;
 
-  const handleItemClick = (title: string) => {
-    alert(`Clicked on ${title}`);
+  const handleItemClick = (event: React.MouseEvent<HTMLButtonElement>, id: number) => {
+    event.stopPropagation();
+    setStarred(prev => {
+      const newSet = new Set(prev);
+      newSet.has(id) ? newSet.delete(id) : newSet.add(id);
+      return newSet;
+    });
   };
   
   const listToText = (arr?: string[]) => (arr?.length ? arr.join(', ') : 'N/A');
@@ -32,13 +40,12 @@ export default function MovieList({ movies }: MovieListProps) {
     <div className="movie-list-container">
       <ImageList className="movie-list" cols={cols} gap={8}>
         <ImageListItem key="Subheader" cols={cols} style={{ height: 'auto' }}>
-          <ListSubheader component="div">Movies</ListSubheader>
+          <ListSubheader className="movie-list-subheader" component="div">Movies</ListSubheader>
         </ImageListItem>
 
         {movies.map((item) => (
           <ImageListItem 
             key={item.id} 
-            onClick={() => handleItemClick(item.title)} 
             className='movie-item'
           >
             <img
@@ -85,8 +92,12 @@ export default function MovieList({ movies }: MovieListProps) {
               style={{ textAlign: 'left' }}
               position='top'
               actionIcon={
-                  <IconButton sx={{ color: 'white' }} aria-label={`star ${item.title}`}>
-                    <StarBorderIcon />
+                  <IconButton 
+                    sx={{ color: starred.has(item.id) ? '#e50914' : 'white' }} 
+                    aria-label={`star ${item.title}`}
+                    onClick={(e) => handleItemClick(e, item.id)} 
+                  >
+                    {starred.has(item.id) ? <StarIcon /> : <StarBorderIcon />}
                   </IconButton>
                 }
                 actionPosition="left"
