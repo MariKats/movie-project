@@ -14,6 +14,7 @@ VALID_RESPONSE = {
     "Director": "Francis Ford Coppola",
     "Actors": "Al Pacino, Marlon Brando",
     "Production": "Paramount Pictures",
+    "Poster": "https://m.media-amazon.com/images/M/MV5BNGEwYjgwOGQtYjg5ZS00Njc1LTk2ZGEtM2QwZWQ2NjdhZTE5XkEyXkFqcGc@._V1_SX300.jpg"
 }
 
 

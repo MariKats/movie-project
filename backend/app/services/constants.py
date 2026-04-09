@@ -8,3 +8,5 @@ class RequiredMovieFields(str, Enum):
     Year = "Year"
     Genre = "Genre"
     Director = "Director"
+    Poster = "Poster"
+

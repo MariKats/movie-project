@@ -1,6 +1,6 @@
 from typing import Literal
 
-from pydantic import BaseModel, Field
+from pydantic import BaseModel, Field, HttpUrl
 
 
 class NameBase(BaseModel):
@@ -23,6 +23,7 @@ class MovieBase(BaseModel):
     title: str
     summary: str
     year: int
+    poster: HttpUrl | None = None
 
 
 class MovieCreate(MovieBase):
